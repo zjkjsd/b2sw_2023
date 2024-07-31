@@ -1,0 +1,19 @@
+# ===================================== #
+#  Hadron ID weight configuration file  #
+# ===================================== #
+weight_dir: 'fixed_weights/'
+remove_tmp_files: True
+weight_cfg_list:
+ - 
+   prefix_name: Kpi0_Kid90
+   weight_format: 'log'
+   efficiency_particle_type: 'K'
+   fakerate_particle_type: 'pi'
+   binning: 
+    - [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4.5]
+    - [2.618, 2.321, 2.007, 1.675, 1.344, 1.047, 0.698, 0.489, 0.297]
+   track_variables: ["K_p", "K_theta"]
+   cuts: ["kaonID > 0.9"]
+   precuts: [ "nCDCHits>20"]
+   mc_collection: "MC15ri" 
+   data_collection: "proc13+prompt"
